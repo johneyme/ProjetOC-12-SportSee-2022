@@ -1,0 +1,19 @@
+.header-sportsee {
+  background-color: #020203;
+  height: 91px;
+  max-width: 100%;
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-sportsee img {
+  width: 178px;
+}
+
+.header-sportsee a {
+  text-decoration: none;
+  color: white;
+}
