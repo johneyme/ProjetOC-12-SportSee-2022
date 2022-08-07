@@ -1,35 +1,43 @@
 import "../style/Profile.css";
-import React, { useEffect, useState } from "react";
+import React /*, { useEffect, useState }*/ from "react";
+import DailyActivitiesGraph from "../components/DailyActivitiesGraph";
 
 // UserId search in Url bar
-const queryString = window.location.search;
+/*const queryString = window.location.search;
 const userId = new URLSearchParams(queryString).get("id");
-console.log(userId);
+console.log(userId);*/
 
 // Fetch Use to load data user
-const loadData = `http://localhost:3000/user/${userId}`;
+//const loadData = `http://localhost:3000/user/${userId}`;
 
 function Profile() {
-  const [users, setUsers] = useState();
+  const users = {
+    data: {
+      id: 18,
+      userInfos: { firstName: "Cecilia", lastName: "Ratorez", age: 34 },
+      score: 0.3,
+      keyData: {
+        calorieCount: 2500,
+        proteinCount: 90,
+        carbohydrateCount: 150,
+        lipidCount: 120,
+      },
+    },
+  };
 
-  useEffect(() => {
-    fetch(loadData)
-      .then((res) => res.json())
-      .then((res) => {
-        setUsers(res);
-        console.log(res);
-      })
-      .catch((err) => console.error(err));
-  }, []);
+  const userInfos = users.data.userInfos;
+  //const keyData = users.data.keyData;
 
   return (
     <main className="profile-page">
-      <h1 className="profile-title-name">{users.data.id}</h1>
+      <h1 className="profile-title-name">
+        Bonjour <span className="userName-title">{userInfos.firstName}</span>
+      </h1>
       <p className="profile-msg">
         Félicitation vous avez explosez vos objectifs hier !
       </p>
       <div className="profile-row-graphic">
-        <div className="graphic-1">graph 1</div>
+        <DailyActivitiesGraph />
         <div className="graphic-2">graph 2</div>
         <div className="graphic-3">graph 3</div>
         <div className="graphic-4">graph 4</div>
