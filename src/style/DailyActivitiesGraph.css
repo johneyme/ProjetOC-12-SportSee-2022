@@ -1,0 +1,22 @@
+.barchart-graph {
+  background-color: #fbfbfb;
+  border-radius: 5px;
+}
+
+.barchart-graph-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.barchart-graph-header h3 {
+  margin-left: 25px;
+}
+
+.barchart-graph-header ul {
+  display: flex;
+}
+
+.barchart-graph-header li {
+  margin-right: 25px;
+}

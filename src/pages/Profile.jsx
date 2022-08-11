@@ -2,15 +2,29 @@ import "../style/Profile.css";
 import React /*, { useEffect, useState }*/ from "react";
 import DailyActivitiesGraph from "../components/DailyActivitiesGraph";
 
-// UserId search in Url bar
-/*const queryString = window.location.search;
-const userId = new URLSearchParams(queryString).get("id");
-console.log(userId);*/
-
-// Fetch Use to load data user
-//const loadData = `http://localhost:3000/user/${userId}`;
-
 function Profile() {
+  /*
+  // UserId search in Url bar
+  const queryString = window.location.search;
+  const userId = new URLSearchParams(queryString).get("id");
+
+  // Fetch Use to load data user
+  const loadData = `http://localhost:3000/user/${userId}`;
+
+  const [users, setUsers] = useState();
+  // PROBLEME NIBVEAU DU FECTH RENVOI UNE ERREUR LORSQUE QU'ON LANCE LE YARN START
+  // JE DOIS ENLEVER LES ENDPOINTS POUR CHARGER LA PAGE ET LES DATA ET ENSUITES LES REMETTRES
+  // IMPOSSIBLE DE LE FAIRE AU CHARGEMENT DE LA PAGE
+
+  useEffect(() => {
+    fetch(loadData)
+      .then((res) => res.json())
+      .then((res) => {
+        setUsers(res);
+        console.log(res);
+      })
+      .catch((err) => console.error(err));
+  }, [loadData]);*/
   const users = {
     data: {
       id: 18,
@@ -25,8 +39,8 @@ function Profile() {
     },
   };
 
-  const userInfos = users.data.userInfos;
   //const keyData = users.data.keyData;
+  const userInfos = users.data.userInfos;
 
   return (
     <main className="profile-page">
