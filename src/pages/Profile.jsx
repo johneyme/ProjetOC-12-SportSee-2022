@@ -1,6 +1,7 @@
 import "../style/Profile.css";
 import React /*, { useEffect, useState }*/ from "react";
 import DailyActivitiesGraph from "../components/DailyActivitiesGraph";
+import ScoreActivity from "../components/ScoreActivity";
 
 function Profile() {
   /*
@@ -52,7 +53,7 @@ function Profile() {
       </p>
       <div className="profile-row-graphic">
         <DailyActivitiesGraph />
-        <div className="graphic-2">graph 2</div>
+        <ScoreActivity />
         <div className="graphic-3">graph 3</div>
         <div className="graphic-4">graph 4</div>
       </div>

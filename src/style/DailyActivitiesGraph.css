@@ -1,6 +1,11 @@
 .barchart-graph {
   background-color: #fbfbfb;
   border-radius: 5px;
+  width: 835px;
+  height: 320px;
+}
+.barchart-graph .recharts-wrapper {
+  margin: auto;
 }
 
 .barchart-graph-header {

@@ -61,6 +61,7 @@ function DailyActivitiesGraph() {
           radius={[25, 25, 0, 0]}
         />
         <Bar
+          minPointSize={-1000}
           dataKey="calories"
           fill="#E60000"
           barSize={10}
