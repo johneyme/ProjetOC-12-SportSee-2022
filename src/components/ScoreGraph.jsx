@@ -1,7 +1,7 @@
 import { RadialBarChart, RadialBar, PolarAngleAxis } from "recharts";
-import "../style/ScoreActivity.css";
+import "../style/ScoreGraph.css";
 
-function ScoreActivity() {
+function ScoreGraph() {
   const users = [{ score: 0.3 }];
 
   const userScore = [{ score: users[0].score * 100 }];
@@ -41,31 +41,4 @@ function ScoreActivity() {
   );
 }
 
-export default ScoreActivity;
-
-/*
-<RadialBarChart
-               data={score}
-               innerRadius={80}
-               outerRadius={100}
-               barSize={10}
-               background={{ fill: 'white' }}
-               startAngle={90}
-               deprecated
-               endAngle={450}
-            >
-               <PolarAngleAxis
-                  type="number"
-                  domain={[0, 100]}
-                  angleAxisId={0}
-                  tick={false}
-               />
-               <RadialBar
-                  dataKey="value"
-                  cornerRadius={10}
-                  background
-                  //background={{ fill: '#fbfbfb' }}
-                  clockwise
-               />
-            </RadialBarChart>
-    */
+export default ScoreGraph;

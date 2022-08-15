@@ -1,7 +1,9 @@
 import "../style/Profile.css";
 import React /*, { useEffect, useState }*/ from "react";
 import DailyActivitiesGraph from "../components/DailyActivitiesGraph";
-import ScoreActivity from "../components/ScoreActivity";
+import ScoreGraph from "../components/ScoreGraph";
+import RadarGraph from "../components/RadarGraph";
+import AverageLineGraph from "../components/AverageLineGraph";
 
 function Profile() {
   /*
@@ -45,19 +47,22 @@ function Profile() {
 
   return (
     <main className="profile-page">
-      <h1 className="profile-title-name">
+      <h1 className="profile-page__title">
         Bonjour <span className="userName-title">{userInfos.firstName}</span>
       </h1>
-      <p className="profile-msg">
+      <p className="profile-page__message">
         Félicitation vous avez explosez vos objectifs hier !
       </p>
-      <div className="profile-row-graphic">
+      <div className="profile-row__graphic">
         <DailyActivitiesGraph />
-        <ScoreActivity />
+        <AverageLineGraph />
+        <RadarGraph />
+        <ScoreGraph />
+
         <div className="graphic-3">graph 3</div>
         <div className="graphic-4">graph 4</div>
       </div>
-      <div className="profile-row-info">
+      <div className="profile-row__info">
         <div className="info-1">info 1</div>
         <div className="info-2">info 2</div>
         <div className="info-3">info 3</div>

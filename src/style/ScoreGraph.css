@@ -44,5 +44,6 @@
 }
 
 .score-text {
-  line-height: 25px;
+  line-height: 20px;
+  font-weight: 500;
 }
