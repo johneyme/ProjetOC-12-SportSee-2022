@@ -3,25 +3,14 @@
   border-radius: 5px;
   width: 835px;
   height: 320px;
-}
-.barchart-graph .recharts-wrapper {
-  margin: auto;
+  position: relative;
 }
 
-.barchart-graph-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 25px;
-}
-
-.barchart-graph-header h3 {
-  margin-left: 25px;
-}
-
-.barchart-graph-header ul {
-  display: flex;
-}
-
-.barchart-graph-header li {
-  margin-right: 25px;
+.activity-graph__title {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 2rem;
 }

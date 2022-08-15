@@ -12,8 +12,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <Header />
-    <AsideOptions />
-    <Profile />
+    <div className="complete-page">
+      <Header />
+      <AsideOptions />
+      <Profile />
+    </div>
   </React.StrictMode>
 );

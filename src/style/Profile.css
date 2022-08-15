@@ -2,5 +2,22 @@
   position: absolute;
   left: 150px;
   top: 120px;
-  border: 2px solid black;
+}
+
+.profile-page h1,
+p {
+  margin-left: 15px;
+}
+
+.userName-title {
+  color: #ff0101;
+}
+
+.profile-row {
+  display: flex;
+}
+
+.profile-row__graphic {
+  display: flex;
+  flex-wrap: wrap;
 }

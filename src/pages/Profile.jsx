@@ -53,20 +53,19 @@ function Profile() {
       <p className="profile-page__message">
         Félicitation vous avez explosez vos objectifs hier !
       </p>
-      <div className="profile-row__graphic">
-        <DailyActivitiesGraph />
-        <AverageLineGraph />
-        <RadarGraph />
-        <ScoreGraph />
-
-        <div className="graphic-3">graph 3</div>
-        <div className="graphic-4">graph 4</div>
-      </div>
-      <div className="profile-row__info">
-        <div className="info-1">info 1</div>
-        <div className="info-2">info 2</div>
-        <div className="info-3">info 3</div>
-        <div className="info-4">info 4</div>
+      <div className="profile-row">
+        <div className="profile-row__graphic">
+          <DailyActivitiesGraph />
+          <AverageLineGraph />
+          <RadarGraph />
+          <ScoreGraph />
+        </div>
+        <div className="profile-row__info">
+          <div className="info-1">info 1</div>
+          <div className="info-2">info 2</div>
+          <div className="info-3">info 3</div>
+          <div className="info-4">info 4</div>
+        </div>
       </div>
     </main>
   );

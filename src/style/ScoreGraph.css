@@ -1,4 +1,6 @@
 .score-graph {
+  margin: 15px;
+
   width: 258px;
   height: 263px;
   background-color: #fbfbfb;
@@ -22,7 +24,7 @@
   position: absolute;
   flex-direction: column;
   display: flex;
-  margin-top: 60px;
+  margin-top: 50px;
   margin-left: 50px;
   justify-content: center;
   align-items: center;
