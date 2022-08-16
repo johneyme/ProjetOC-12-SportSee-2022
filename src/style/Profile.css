@@ -4,11 +4,6 @@
   top: 120px;
 }
 
-.profile-page h1,
-p {
-  margin-left: 15px;
-}
-
 .userName-title {
   color: #ff0101;
 }
@@ -20,4 +15,10 @@ p {
 .profile-row__graphic {
   display: flex;
   flex-wrap: wrap;
+}
+
+.profile-row__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

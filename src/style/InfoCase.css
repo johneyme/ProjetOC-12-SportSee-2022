@@ -1,0 +1,31 @@
+.info-case {
+  width: 258px;
+  height: 124px;
+  background-color: #fbfbfb;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info-case__leftside {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-case__rightside h5 {
+  color: #74798c;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.info-case__rightside p {
+  color: #282d30;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+}

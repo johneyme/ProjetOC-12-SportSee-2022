@@ -4,6 +4,11 @@ import DailyActivitiesGraph from "../components/DailyActivitiesGraph";
 import ScoreGraph from "../components/ScoreGraph";
 import RadarGraph from "../components/RadarGraph";
 import AverageLineGraph from "../components/AverageLineGraph";
+import InfoCase from "../components/InfoCase";
+import logoFlame from "../assets/logo-flame.svg";
+import logoChicken from "../assets/logo-chicken.svg";
+import logoApple from "../assets/logo-apple.svg";
+import logoBurger from "../assets/logo-burger.svg";
 
 function Profile() {
   /*
@@ -51,7 +56,7 @@ function Profile() {
         Bonjour <span className="userName-title">{userInfos.firstName}</span>
       </h1>
       <p className="profile-page__message">
-        Félicitation vous avez explosez vos objectifs hier !
+        Félicitation ! Vous avez explosé vos objectifs hier 👏
       </p>
       <div className="profile-row">
         <div className="profile-row__graphic">
@@ -61,10 +66,30 @@ function Profile() {
           <ScoreGraph />
         </div>
         <div className="profile-row__info">
-          <div className="info-1">info 1</div>
-          <div className="info-2">info 2</div>
-          <div className="info-3">info 3</div>
-          <div className="info-4">info 4</div>
+          <InfoCase
+            img={logoFlame}
+            count="2500Kcal"
+            category="Calories"
+            color="#FF000007"
+          />
+          <InfoCase
+            img={logoChicken}
+            count="90g"
+            category="Proteines"
+            color="#4ab7ff10"
+          />
+          <InfoCase
+            img={logoApple}
+            count="150g"
+            category="Glucides"
+            color="#FDCC0C10"
+          />
+          <InfoCase
+            img={logoBurger}
+            count="120g"
+            category="Calories"
+            color="#FD518110"
+          />
         </div>
       </div>
     </main>
