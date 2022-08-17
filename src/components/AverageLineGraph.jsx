@@ -25,7 +25,6 @@ function AverageLineGraph() {
   };
 
   const sessions = users.data.sessions;
-  console.log(sessions);
 
   return (
     <div className="average-line-graph">

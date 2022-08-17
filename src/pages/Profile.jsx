@@ -1,5 +1,5 @@
 import "../style/Profile.css";
-import React /*, { useEffect, useState }*/ from "react";
+import React, { useEffect, useState } from "react";
 import DailyActivitiesGraph from "../components/DailyActivitiesGraph";
 import ScoreGraph from "../components/ScoreGraph";
 import RadarGraph from "../components/RadarGraph";
@@ -11,7 +11,6 @@ import logoApple from "../assets/logo-apple.svg";
 import logoBurger from "../assets/logo-burger.svg";
 
 function Profile() {
-  /*
   // UserId search in Url bar
   const queryString = window.location.search;
   const userId = new URLSearchParams(queryString).get("id");
@@ -19,7 +18,7 @@ function Profile() {
   // Fetch Use to load data user
   const loadData = `http://localhost:3000/user/${userId}`;
 
-  const [users, setUsers] = useState();
+  const [users, setUsers] = useState([]);
   // PROBLEME NIBVEAU DU FECTH RENVOI UNE ERREUR LORSQUE QU'ON LANCE LE YARN START
   // JE DOIS ENLEVER LES ENDPOINTS POUR CHARGER LA PAGE ET LES DATA ET ENSUITES LES REMETTRES
   // IMPOSSIBLE DE LE FAIRE AU CHARGEMENT DE LA PAGE
@@ -29,31 +28,13 @@ function Profile() {
       .then((res) => res.json())
       .then((res) => {
         setUsers(res);
-        console.log(res);
-      })
-      .catch((err) => console.error(err));
-  }, [loadData]);*/
-  const users = {
-    data: {
-      id: 18,
-      userInfos: { firstName: "Cecilia", lastName: "Ratorez", age: 34 },
-      score: 0.3,
-      keyData: {
-        calorieCount: 2500,
-        proteinCount: 90,
-        carbohydrateCount: 150,
-        lipidCount: 120,
-      },
-    },
-  };
-
-  //const keyData = users.data.keyData;
-  const userInfos = users.data.userInfos;
+      });
+  }, [loadData]);
 
   return (
     <main className="profile-page">
       <h1 className="profile-page__title">
-        Bonjour <span className="userName-title">{userInfos.firstName}</span>
+        Bonjour <span className="userName-title">{users.data.id}</span>
       </h1>
       <p className="profile-page__message">
         Félicitation ! Vous avez explosé vos objectifs hier 👏
