@@ -1,40 +1,23 @@
 import "../style/Profile.css";
-import React, { useEffect, useState } from "react";
-import DailyActivitiesGraph from "../components/DailyActivitiesGraph";
-import ScoreGraph from "../components/ScoreGraph";
-import RadarGraph from "../components/RadarGraph";
-import AverageLineGraph from "../components/AverageLineGraph";
-import InfoCase from "../components/InfoCase";
+import DailyActivitiesGraph from "./DailyActivitiesGraph";
+import ScoreGraph from "./ScoreGraph";
+import RadarGraph from "./RadarGraph";
+import AverageLineGraph from "./AverageLineGraph";
+import InfoCase from "./InfoCase";
 import logoFlame from "../assets/logo-flame.svg";
 import logoChicken from "../assets/logo-chicken.svg";
 import logoApple from "../assets/logo-apple.svg";
 import logoBurger from "../assets/logo-burger.svg";
+import user from "../mock/userData";
 
 function Profile() {
-  // UserId search in Url bar
-  const queryString = window.location.search;
-  const userId = new URLSearchParams(queryString).get("id");
-
-  // Fetch Use to load data user
-  const loadData = `http://localhost:3000/user/${userId}`;
-
-  const [users, setUsers] = useState([]);
-  // PROBLEME NIBVEAU DU FECTH RENVOI UNE ERREUR LORSQUE QU'ON LANCE LE YARN START
-  // JE DOIS ENLEVER LES ENDPOINTS POUR CHARGER LA PAGE ET LES DATA ET ENSUITES LES REMETTRES
-  // IMPOSSIBLE DE LE FAIRE AU CHARGEMENT DE LA PAGE
-
-  useEffect(() => {
-    fetch(loadData)
-      .then((res) => res.json())
-      .then((res) => {
-        setUsers(res);
-      });
-  }, [loadData]);
+  const userInfos = user.data.userInfos;
+  const keyData = user.data.keyData;
 
   return (
-    <main className="profile-page">
+    <section className="profile">
       <h1 className="profile-page__title">
-        Bonjour <span className="userName-title">{users.data.id}</span>
+        Bonjour <span className="userName-title">{userInfos.firstName}</span>
       </h1>
       <p className="profile-page__message">
         Félicitation ! Vous avez explosé vos objectifs hier 👏
@@ -49,31 +32,31 @@ function Profile() {
         <div className="profile-row__info">
           <InfoCase
             img={logoFlame}
-            count="2500Kcal"
+            count={keyData.calorieCount}
             category="Calories"
             color="#FF000007"
           />
           <InfoCase
             img={logoChicken}
-            count="90g"
+            count={keyData.proteinCount}
             category="Proteines"
             color="#4ab7ff10"
           />
           <InfoCase
             img={logoApple}
-            count="150g"
+            count={keyData.carbohydrateCount}
             category="Glucides"
             color="#FDCC0C10"
           />
           <InfoCase
             img={logoBurger}
-            count="120g"
+            count={keyData.lipidCount}
             category="Calories"
             color="#FD518110"
           />
         </div>
       </div>
-    </main>
+    </section>
   );
 }
 

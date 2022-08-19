@@ -1,10 +1,11 @@
 import { RadialBarChart, RadialBar, PolarAngleAxis } from "recharts";
 import "../style/ScoreGraph.css";
+import userData from "../mock/userData";
 
 function ScoreGraph() {
-  const users = [{ score: 0.3 }];
+  const score = userData.data.score;
 
-  const userScore = [{ score: users[0].score * 100 }];
+  const userScore = [{ score: score * 100 }];
 
   return (
     <div className="score-graph">

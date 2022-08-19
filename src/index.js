@@ -3,19 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 // IMPORT COMPONENTS AND PAGE
-import Header from "./components/Header";
-import Profile from "./pages/Profile";
-import AsideOptions from "./components/AsideOptions";
+import UserPage from "./pages/UserPage";
 
 // START APP REACT RENDER
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <div className="complete-page">
-      <Header />
-      <AsideOptions />
-      <Profile />
-    </div>
+    <UserPage />
   </React.StrictMode>
 );

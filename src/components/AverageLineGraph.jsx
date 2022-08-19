@@ -7,24 +7,10 @@ import {
   Tooltip,
 } from "recharts";
 import "../style/AverageLineGraph.css";
+import userAverage from "../mock/userAverage";
 
 function AverageLineGraph() {
-  const users = {
-    data: {
-      userId: 18,
-      sessions: [
-        { day: 1, sessionLength: 30 },
-        { day: 2, sessionLength: 40 },
-        { day: 3, sessionLength: 50 },
-        { day: 4, sessionLength: 30 },
-        { day: 5, sessionLength: 30 },
-        { day: 6, sessionLength: 50 },
-        { day: 7, sessionLength: 50 },
-      ],
-    },
-  };
-
-  const sessions = users.data.sessions;
+  const average = userAverage.data.sessions;
 
   return (
     <div className="average-line-graph">
@@ -33,7 +19,7 @@ function AverageLineGraph() {
       </div>
       <ResponsiveContainer width="100%" height={250}>
         <LineChart
-          data={sessions}
+          data={average}
           margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
         >
           <YAxis
