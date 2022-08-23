@@ -9,10 +9,12 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import "../style/DailyActivitiesGraph.css";
-import userActivity from "../mock/userActivity";
+//import userActivity from "../mock/userActivity";
 
-function DailyActivitiesGraph() {
-  const sessions = userActivity.data.sessions;
+function DailyActivitiesGraph(props) {
+  const activities = props.activities;
+
+  const sessions = activities.data.sessions;
 
   const contentStyle = { color: "#74798c", fontSize: "14px" };
 

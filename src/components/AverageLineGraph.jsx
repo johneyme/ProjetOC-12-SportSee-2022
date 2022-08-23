@@ -7,10 +7,10 @@ import {
   Tooltip,
 } from "recharts";
 import "../style/AverageLineGraph.css";
-import userAverage from "../mock/userAverage";
+//import userAverage from "../mock/userAverage";
 
-function AverageLineGraph() {
-  const average = userAverage.data.sessions;
+function AverageLineGraph(props) {
+  const average = props.average.data.sessions;
 
   return (
     <div className="average-line-graph">

@@ -7,10 +7,10 @@ import {
   // ResponsiveContainer,
 } from "recharts";
 import "../style/RadarGraph.css";
-import userPerformance from "../mock/userPerformance";
+//import userPerformance from "../mock/userPerformance";
 
-function RadarGraph() {
-  const performance = userPerformance.data;
+function RadarGraph(props) {
+  const performance = props.performances.data;
 
   return (
     <div className="radar-graph">

@@ -16,16 +16,14 @@
   justify-content: center;
 }
 
-.info-case__rightside h5 {
+.info-case__rightside span {
   color: #74798c;
   font-weight: 500;
   font-size: 14px;
-  line-height: 24px;
 }
 
 .info-case__rightside p {
   color: #282d30;
   font-size: 20px;
   font-weight: 700;
-  line-height: 20px;
 }
