@@ -8,11 +8,13 @@ import logoFlame from "../assets/logo-flame.svg";
 import logoChicken from "../assets/logo-chicken.svg";
 import logoApple from "../assets/logo-apple.svg";
 import logoBurger from "../assets/logo-burger.svg";
-import user from "../mock/userData";
+//import user from "../mock/userData";
 
-function Profile() {
-  const userInfos = user.data.userInfos;
-  const keyData = user.data.keyData;
+function Profile(props) {
+  const { users } = props;
+
+  const userInfos = users.data.userInfos;
+  const keyData = users.data.keyData;
 
   return (
     <section className="profile">
