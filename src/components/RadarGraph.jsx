@@ -23,7 +23,12 @@ function RadarGraph(props) {
         <PolarGrid radialLines={false} />
         <PolarAngleAxis dataKey="kind" stroke={`#fff`} />
         <PolarRadiusAxis axisLine={false} tick={false} />
-        <Radar name="Radar" dataKey="value" fill="#FF0101" fillOpacity={0.7} />
+        <Radar
+          name="performance"
+          dataKey="value"
+          fill="#FF0101"
+          fillOpacity={0.7}
+        />
       </RadarChart>
     </div>
   );

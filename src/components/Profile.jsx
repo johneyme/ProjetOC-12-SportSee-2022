@@ -30,9 +30,11 @@ function Profile(props) {
       <div className="profile-row">
         <div className="profile-row__graphic">
           <DailyActivitiesGraph activities={activities} />
-          <AverageLineGraph average={average} />
-          <RadarGraph performances={performances} />
-          <ScoreGraph users={users} />
+          <div className="profile-row__little-components">
+            <AverageLineGraph average={average} />
+            <RadarGraph performances={performances} />
+            <ScoreGraph users={users} />
+          </div>
         </div>
         <div className="profile-row__info">
           <InfoCase
