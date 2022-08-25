@@ -1,13 +1,13 @@
-import "../style/Profile.css";
-import DailyActivitiesGraph from "./DailyActivitiesGraph";
-import ScoreGraph from "./ScoreGraph";
-import RadarGraph from "./RadarGraph";
-import AverageLineGraph from "./AverageLineGraph";
-import InfoCase from "./InfoCase";
-import logoFlame from "../assets/logo-flame.svg";
-import logoChicken from "../assets/logo-chicken.svg";
-import logoApple from "../assets/logo-apple.svg";
-import logoBurger from "../assets/logo-burger.svg";
+import "../Profile/Profile.css";
+import DailyActivitiesGraph from "../DailyActivitiesGraph/DailyActivitiesGraph";
+import ScoreGraph from "../ScoreGraph/ScoreGraph";
+import RadarGraph from "../RadarGraph/RadarGraph";
+import AverageLineGraph from "../AverageLineGraph/AverageLineGraph";
+import InfoCase from "../InfoCase/InfoCase";
+import logoFlame from "../../assets/logo-flame.svg";
+import logoChicken from "../../assets/logo-chicken.svg";
+import logoApple from "../../assets/logo-apple.svg";
+import logoBurger from "../../assets/logo-burger.svg";
 //import user from "../mock/userData";
 
 function Profile(props) {

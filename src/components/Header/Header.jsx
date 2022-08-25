@@ -1,5 +1,5 @@
-import "../style/Header.css";
-import logo from "../assets/logo-sportsee.svg";
+import "./Header.css";
+import logo from "../../assets/logo-sportsee.svg";
 
 function Header() {
   return (

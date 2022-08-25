@@ -1,10 +1,10 @@
 // Logo buttons import
-import imgZen from "../assets/button-zen.svg";
-import imgSwim from "../assets/button-swim.svg";
-import imgBike from "../assets/button-bike.svg";
-import imgMuscle from "../assets/button-muscle.svg";
+import imgZen from "../../assets/button-zen.svg";
+import imgSwim from "../../assets/button-swim.svg";
+import imgBike from "../../assets/button-bike.svg";
+import imgMuscle from "../../assets/button-muscle.svg";
 
-import "../style/AsideOptions.css";
+import "./AsideOptions.css";
 
 function AsideOptions() {
   return (

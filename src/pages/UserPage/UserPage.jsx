@@ -1,8 +1,8 @@
-import "../style/UserPage.css";
+import "./UserPage.css";
 import React, { useEffect, useState } from "react";
-import Header from "../components/Header";
-import Profile from "../components/Profile";
-import AsideOptions from "../components/AsideOptions";
+import Header from "../../components/Header/Header";
+import Profile from "../../components/Profile/Profile";
+import AsideOptions from "../../components/AsideOptions/AsideOptions";
 
 function UserPage() {
   // UserId search in Url bar

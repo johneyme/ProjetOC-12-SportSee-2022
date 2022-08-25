@@ -8,9 +8,3 @@
   background-color: #282d30;
   border-radius: 5px;
 }
-
-.radar-graph .recharts-wrapper {
-  position: relative;
-  top: 35px;
-  margin: auto;
-}

@@ -1,4 +1,4 @@
-import "../style/InfoCase.css";
+import "./InfoCase.css";
 
 function InfoCase({ img, count, category, color, type }) {
   return (

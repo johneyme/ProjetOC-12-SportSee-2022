@@ -8,7 +8,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import "../style/DailyActivitiesGraph.css";
+import "./DailyActivitiesGraph.css";
 //import userActivity from "../mock/userActivity";
 
 function DailyActivitiesGraph(props) {
