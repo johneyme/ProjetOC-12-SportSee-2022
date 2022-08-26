@@ -1,8 +1,8 @@
 import "../Profile/Profile.css";
-import DailyActivitiesGraph from "../DailyActivitiesGraph/DailyActivitiesGraph";
-import ScoreGraph from "../ScoreGraph/ScoreGraph";
-import RadarGraph from "../RadarGraph/RadarGraph";
-import AverageLineGraph from "../AverageLineGraph/AverageLineGraph";
+import DailyActivitiesGraph from "../Graphics/DailyActivitiesGraph/DailyActivitiesGraph";
+import ScoreGraph from "../Graphics/ScoreGraph/ScoreGraph";
+import RadarGraph from "../Graphics/RadarGraph/RadarGraph";
+import AverageLineGraph from "../Graphics/AverageLineGraph/AverageLineGraph";
 import InfoCase from "../InfoCase/InfoCase";
 import logoFlame from "../../assets/logo-flame.svg";
 import logoChicken from "../../assets/logo-chicken.svg";
@@ -30,7 +30,7 @@ function Profile(props) {
       <div className="profile-row">
         <div className="profile-row__graphic">
           <DailyActivitiesGraph activities={activities} />
-          <div className="profile-row__little-components">
+          <div className="profile-row__squareGraphics">
             <AverageLineGraph average={average} />
             <RadarGraph performances={performances} />
             <ScoreGraph users={users} />

@@ -7,6 +7,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+import "../../../style/ResponsiveSquareGraph.css";
 import "./RadarGraph.css";
 //import userPerformance from "../mock/userPerformance";
 
@@ -26,9 +27,9 @@ function RadarGraph(props) {
   }
 
   return (
-    <div className="radar-graph">
-      <ResponsiveContainer width="100%" height="100%">
-        <RadarChart cx="50%" cy="50%" outerRadius="68%" data={performance.data}>
+    <div className="radar-graph sizeGraph bloc">
+      <ResponsiveContainer className={"content"} width="100%" height="100%">
+        <RadarChart cx="50%" cy="50%" outerRadius="60%" data={performance.data}>
           <PolarGrid radialLines={false} />
           <PolarAngleAxis
             dataKey="kind"

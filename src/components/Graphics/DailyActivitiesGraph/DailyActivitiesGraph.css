@@ -1,7 +1,7 @@
 .barchart-graph {
   background-color: #fbfbfb;
   border-radius: 5px;
-  width: 835px;
+  width: 100%;
   height: 320px;
   position: relative;
 }

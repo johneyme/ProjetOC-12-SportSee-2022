@@ -5,6 +5,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import "./ScoreGraph.css";
+import "../../../style/ResponsiveSquareGraph.css";
 //import userData from "../mock/userData";
 
 function ScoreGraph(props) {
@@ -19,9 +20,9 @@ function ScoreGraph(props) {
   const newScore = score * 100;
 
   return (
-    <div className="score-graph">
+    <div className="score-graph sizeGraph bloc">
       <h3 className="score-graph__title">Score</h3>
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer className={"content"} width="100%" height="100%">
         <RadialBarChart
           data={userScore}
           innerRadius={80}

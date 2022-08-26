@@ -1,7 +1,6 @@
 .profile {
-  position: absolute;
-  left: 150px;
-  top: 120px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 .userName-title {
@@ -10,20 +9,38 @@
 
 .profile-row {
   display: flex;
-  width: 1125px;
+  width: 100%;
 }
 
 .profile-row__graphic {
+  width: 75%;
   display: flex;
   flex-wrap: wrap;
 }
-.profile-row__little-components {
+.profile-row__squareGraphics {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .profile-row__info {
+  width: 25%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+@media (max-width: 1400px) {
+  .profile {
+    margin-left: 150px;
+    margin-right: 0px;
+  }
+  .profile-row__info {
+    width: 20%;
+  }
+  .profile-row__graphic {
+    width: 80%;
+  }
 }

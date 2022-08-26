@@ -7,6 +7,7 @@ import {
   Tooltip,
 } from "recharts";
 import "./AverageLineGraph.css";
+import "../../../style/ResponsiveSquareGraph.css";
 //import userAverage from "../mock/userAverage";
 
 function AverageLineGraph(props) {
@@ -15,11 +16,11 @@ function AverageLineGraph(props) {
   const numberOfDay = ["L ", "M ", "M ", "J ", "V ", "S ", "D "];
 
   return (
-    <div className="average-line-graph">
+    <div className="average-line-graph sizeGraph bloc">
       <div className="average-line-graph__title">
         Durée moyenne des sessions
       </div>
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer className={"content"} width="100%" height="100%">
         <LineChart
           data={average}
           margin={{
