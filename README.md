@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# SportSee
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Projet 12 - Développez un tableau de bord d'analytics avec React
 
-## Available Scripts
+## Author
 
-In the project directory, you can run:
+- John EYME
 
-### `npm start`
+## Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [![Made-with-Javascript](https://img.shields.io/badge/Made%20with-Javascript-green)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
+- [![React-v_18.2.0](https://img.shields.io/badge/React-v_17.24.1-blue)](https://fr.reactjs.org/)
+- [![Recharts-v_2.1.13](https://img.shields.io/badge/Recharts-v_2.1.9-%2322b5bf)](https://recharts.org/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Environments
 
-### `npm test`
+https://github.com/johneyme/projetoc-12-sportsee-2022
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [![yarn-v_1.22.19](https://img.shields.io/badge/yarn-v_1.22.19-orange)](https://docs.npmjs.com/)
+- [![NodeJs-v_16.13.0](https://img.shields.io/badge/NodeJs-v_16.10.0-red)](https://nodejs.org/en/docs/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- VSCode
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installing and launching Back-End
 
-### `npm run eject`
+Clone the repository Back-End:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Inside this back-end repository, install dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+`yarn install`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Launch back-end on port 3000 (default port):
 
-## Learn More
+`yarn start`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Installing and launching Front-end
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Clone the repository of SportSee Front-End:
 
-### Code Splitting
+`git clone https://github.com/johneyme/projetoc-12-sportsee-2022`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Inside this Front-End repository, install dependencies:
 
-### Analyzing the Bundle Size
+`yarn install`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Lauch Front-End on port 3001:
 
-### Making a Progressive Web App
+`yarn start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Front-End is now rendered at URL `http://localhost:4000/`
 
-### Advanced Configuration
+#### Use a ID on URL
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+You must to put an id at URL to simulate a log to a user
 
-### Deployment
+Example:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`http://localhost:4000/?id=12` or `http://localhost:4000/?id=18`
