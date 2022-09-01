@@ -3,43 +3,25 @@ import React, { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
 import Profile from "../../components/Profile/Profile";
 import AsideOptions from "../../components/AsideOptions/AsideOptions";
+import fetchAll from "../../utils/fetchData";
+import PropTypes from "prop-types";
+/**
+ * User page.
+ * @description Displays the User page with all blocks (Header, Left menu (asideOptions), Profile components (userInfo, charts, ...)).
+ * @using the fetchAll function to recover all user information from the database
+ * @returns User page React Element.
+ * @author John EYME
+ */
 
 function UserPage() {
-  // UserId search in Url bar
-  const queryString = window.location.search;
-  const userId = new URLSearchParams(queryString).get("id");
-
-  // Fetch Use to load data user
-  const loadUsers = `http://localhost:3000/user/${userId}`;
-  const loadActivities = `http://localhost:3000/user/${userId}/activity`;
-  const loadAverage = `http://localhost:3000/user/${userId}/average-sessions`;
-  const loadPerformance = `http://localhost:3000/user/${userId}/performance`;
-
   const [users, setUsers] = useState();
   const [activities, setActivities] = useState([]);
   const [average, setAvererage] = useState([]);
   const [performances, setPerformances] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const responseUser = await fetch(loadUsers);
-      const responseActivities = await fetch(loadActivities);
-      const responseAverage = await fetch(loadAverage);
-      const responsePerformance = await fetch(loadPerformance);
-
-      const newDataUser = await responseUser.json();
-      const newDataActivities = await responseActivities.json();
-      const newDataAverage = await responseAverage.json();
-      const newDataPerformance = await responsePerformance.json();
-
-      setUsers(newDataUser);
-      setActivities(newDataActivities);
-      setAvererage(newDataAverage);
-      setPerformances(newDataPerformance);
-    };
-
-    fetchData();
-  }, [loadUsers, loadActivities, loadAverage, loadPerformance]);
+    fetchAll(setUsers, setActivities, setAvererage, setPerformances);
+  }, []);
 
   if (!users || users.length === 0) {
     return null;
@@ -58,5 +40,12 @@ function UserPage() {
     );
   }
 }
+
+Profile.propTypes = {
+  users: PropTypes.object,
+  activities: PropTypes.object,
+  average: PropTypes.object,
+  performances: PropTypes.object,
+};
 
 export default UserPage;

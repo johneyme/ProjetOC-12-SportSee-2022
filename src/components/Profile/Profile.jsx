@@ -8,13 +8,26 @@ import logoFlame from "../../assets/logo-flame.svg";
 import logoChicken from "../../assets/logo-chicken.svg";
 import logoApple from "../../assets/logo-apple.svg";
 import logoBurger from "../../assets/logo-burger.svg";
+import PropTypes from "prop-types";
 //import user from "../mock/userData";
 
-function Profile(props) {
-  const users = props.users;
-  const activities = props.activities;
-  const average = props.average;
-  const performances = props.performances;
+/**
+ * Profile components
+ * @description Displays the main components with all graphics and user informations.
+ */
+
+function Profile(user) {
+  /**
+   * @constant messageToUser
+   * Welcome text
+   */
+  const messageToUser =
+    "Félicitation ! Vous avez explosé vos objectifs hier 👏";
+
+  const users = user.users;
+  const activities = user.activities;
+  const average = user.average;
+  const performances = user.performances;
 
   const userInfos = users.data.userInfos;
   const keyData = users.data.keyData;
@@ -24,9 +37,7 @@ function Profile(props) {
       <h1 className="profile-page__title">
         Bonjour <span className="userName-title">{userInfos.firstName}</span>
       </h1>
-      <p className="profile-page__message">
-        Félicitation ! Vous avez explosé vos objectifs hier 👏
-      </p>
+      <p className="profile-page__message">{messageToUser}</p>
       <div className="profile-row">
         <div className="profile-row__graphic">
           <DailyActivitiesGraph activities={activities} />
@@ -70,5 +81,14 @@ function Profile(props) {
     </section>
   );
 }
+
+Profile.propTypes = {
+  userInfos: PropTypes.object,
+  keyData: PropTypes.object,
+  users: PropTypes.object,
+  performances: PropTypes.object,
+  average: PropTypes.object,
+  activities: PropTypes.object,
+};
 
 export default Profile;

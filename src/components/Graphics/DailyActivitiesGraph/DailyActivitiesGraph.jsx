@@ -8,13 +8,18 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import PropTypes from "prop-types";
 import "./DailyActivitiesGraph.css";
 //import userActivity from "../mock/userActivity";
 
-function DailyActivitiesGraph(props) {
-  const activities = props.activities;
+/**
+ *
+ * @param {object} userActivity
+ * @returns  graphic with daily activities from the user
+ */
 
-  const sessions = activities.data.sessions;
+function DailyActivitiesGraph(userActivity) {
+  const sessions = userActivity.activities.data.sessions;
 
   const contentStyle = { color: "#74798c", fontSize: "14px" };
 
@@ -94,5 +99,9 @@ function DailyActivitiesGraph(props) {
     </div>
   );
 }
+
+DailyActivitiesGraph.propTypes = {
+  sessions: PropTypes.array,
+};
 
 export default DailyActivitiesGraph;

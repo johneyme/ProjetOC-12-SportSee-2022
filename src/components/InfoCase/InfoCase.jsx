@@ -1,4 +1,11 @@
 import "./InfoCase.css";
+import PropTypes from "prop-types";
+
+/**
+ * InfoCase Components(components on the right on Profile page)
+ * @description display userInformations with icons
+ * @returns InfoCase components based on props in Profile Components
+ */
 
 function InfoCase({ img, count, category, color, type }) {
   return (
@@ -17,5 +24,10 @@ function InfoCase({ img, count, category, color, type }) {
     </div>
   );
 }
+
+InfoCase.propTypes = {
+  count: PropTypes.number,
+  type: PropTypes.string,
+};
 
 export default InfoCase;

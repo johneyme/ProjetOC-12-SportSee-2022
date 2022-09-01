@@ -6,12 +6,18 @@ import {
   ResponsiveContainer,
   Tooltip,
 } from "recharts";
+import PropTypes from "prop-types";
 import "./AverageLineGraph.css";
 import "../../../style/ResponsiveSquareGraph.css";
 //import userAverage from "../mock/userAverage";
 
-function AverageLineGraph(props) {
-  const average = props.average.data.sessions;
+/**
+ * @param {object} userAverage
+ * @returns  graphic with an average line about sessions from the user
+ */
+
+function AverageLineGraph(userAverage) {
+  const average = userAverage.average.data.sessions;
 
   const numberOfDay = ["L ", "M ", "M ", "J ", "V ", "S ", "D "];
 
@@ -85,5 +91,9 @@ function AverageLineGraph(props) {
     </div>
   );
 }
+
+AverageLineGraph.propTypes = {
+  average: PropTypes.object,
+};
 
 export default AverageLineGraph;

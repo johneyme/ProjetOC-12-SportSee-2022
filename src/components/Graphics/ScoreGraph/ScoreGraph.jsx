@@ -6,14 +6,20 @@ import {
 } from "recharts";
 import "./ScoreGraph.css";
 import "../../../style/ResponsiveSquareGraph.css";
+import PropTypes from "prop-types";
 //import userData from "../mock/userData";
 
-function ScoreGraph(props) {
+/**
+ * @param {object} userData
+ * @returns  graphic with global score from the user
+ */
+
+function ScoreGraph(userData) {
   let score;
-  if (props.users.data.score) {
-    score = props.users.data.score;
+  if (userData.users.data.score) {
+    score = userData.users.data.score;
   } else {
-    score = props.users.data.todayScore;
+    score = userData.users.data.todayScore;
   }
 
   const userScore = [{ score: score * 100 }];
@@ -68,5 +74,9 @@ function ScoreGraph(props) {
     </div>
   );
 }
+
+ScoreGraph.propTypes = {
+  score: PropTypes.number,
+};
 
 export default ScoreGraph;

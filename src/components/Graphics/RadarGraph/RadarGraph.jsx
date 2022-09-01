@@ -6,13 +6,18 @@ import {
   PolarRadiusAxis,
   ResponsiveContainer,
 } from "recharts";
-
+import PropTypes from "prop-types";
 import "../../../style/ResponsiveSquareGraph.css";
 import "./RadarGraph.css";
 //import userPerformance from "../mock/userPerformance";
 
-function RadarGraph(props) {
-  const performance = props.performances.data;
+/**
+ * @param {object} userPerformance
+ * @returns  radar graphic about differents skills from the user
+ */
+
+function RadarGraph(userPerformance) {
+  const performance = userPerformance.performances.data;
 
   const kindName = [
     "Intensité",
@@ -53,5 +58,9 @@ function RadarGraph(props) {
     </div>
   );
 }
+
+RadarGraph.propTypes = {
+  performance: PropTypes.array,
+};
 
 export default RadarGraph;
