@@ -49,7 +49,7 @@ Inside this Front-End repository, install dependencies:
 
 `yarn install`
 
-Lauch Front-End on port 3001:
+Lauch Front-End on port 4000:
 
 `yarn start`
 
