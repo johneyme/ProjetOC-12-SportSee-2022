@@ -15,10 +15,10 @@ import PropTypes from "prop-types";
 
 function ScoreGraph(userData) {
   let score;
-  if (userData.users.data.score) {
-    score = userData.users.data.score;
+  if (userData.users.score) {
+    score = userData.users.score;
   } else {
-    score = userData.users.data.todayScore;
+    score = userData.users.todayScore;
   }
 
   const userScore = [{ score: score * 100 }];

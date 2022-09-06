@@ -18,7 +18,7 @@ import "./DailyActivitiesGraph.css";
  */
 
 function DailyActivitiesGraph(userActivity) {
-  const sessions = userActivity.activities.data.sessions;
+  const sessions = userActivity.activities.sessions;
 
   const contentStyle = { color: "#74798c", fontSize: "14px" };
 

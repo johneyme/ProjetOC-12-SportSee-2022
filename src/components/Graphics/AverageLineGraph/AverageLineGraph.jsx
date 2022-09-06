@@ -16,7 +16,7 @@ import "../../../style/ResponsiveSquareGraph.css";
  */
 
 function AverageLineGraph(userAverage) {
-  const average = userAverage.average.data.sessions;
+  const average = userAverage.average.sessions;
 
   const numberOfDay = ["L ", "M ", "M ", "J ", "V ", "S ", "D "];
 

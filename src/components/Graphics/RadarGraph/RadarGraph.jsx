@@ -16,7 +16,7 @@ import "./RadarGraph.css";
  */
 
 function RadarGraph(userPerformance) {
-  const performance = userPerformance.performances.data;
+  const performances = userPerformance.performances.data;
 
   const kindName = [
     "Intensité",
@@ -27,13 +27,13 @@ function RadarGraph(userPerformance) {
     "Cardio",
   ];
   for (let i = 0; i < 6; i++) {
-    performance.data[i].kind = kindName[i];
+    performances[i].kind = kindName[i];
   }
 
   return (
     <div className="radar-graph sizeGraph bloc">
       <ResponsiveContainer className={"content"} width="100%" height="100%">
-        <RadarChart cx="50%" cy="50%" outerRadius="60%" data={performance.data}>
+        <RadarChart cx="50%" cy="50%" outerRadius="60%" data={performances}>
           <PolarGrid radialLines={false} />
           <PolarAngleAxis
             dataKey="kind"

@@ -15,7 +15,7 @@ import PropTypes from "prop-types";
  * @description Displays the main components with all graphics and user informations.
  */
 
-function Profile(user) {
+function Profile(userProfile) {
   /**
    * @constant messageToUser
    * Welcome text
@@ -23,13 +23,13 @@ function Profile(user) {
   const messageToUser =
     "Félicitation ! Vous avez explosé vos objectifs hier 👏";
 
-  const users = user.users;
-  const activities = user.activities;
-  const average = user.average;
-  const performances = user.performances;
+  const users = userProfile.users;
+  const activities = userProfile.activities;
+  const average = userProfile.average;
+  const performances = userProfile.performances;
 
-  const userInfos = users.data.userInfos;
-  const keyData = users.data.keyData;
+  const userInfos = users.userInfos;
+  const keyData = users.keyData;
 
   return (
     <section className="profile">

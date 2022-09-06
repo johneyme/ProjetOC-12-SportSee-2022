@@ -3,6 +3,8 @@ import mockActivities from "../mock/userActivity";
 import mockAverage from "../mock/userAverage";
 import mockPerformances from "../mock/userPerformance";*/
 
+import UserModel from "../utils/userModel";
+
 /**
  * @async
  * @function fetchAll
@@ -11,7 +13,7 @@ import mockPerformances from "../mock/userPerformance";*/
  *
  */
 
-function fetchAll(setUsers, setActivities, setAvererage, setPerformances) {
+function fetchAll(setUsers) {
   // UserId search in Url bar
   const queryString = window.location.search;
   const userId = new URLSearchParams(queryString).get("id");
@@ -33,17 +35,19 @@ function fetchAll(setUsers, setActivities, setAvererage, setPerformances) {
     const newDataAverage = await responseAverage.json();
     const newDataPerformance = await responsePerformance.json();
 
-    setUsers(newDataUser);
-    setActivities(newDataActivities);
-    setAvererage(newDataAverage);
-    setPerformances(newDataPerformance);
+    let user = new UserModel(
+      newDataUser,
+      newDataActivities,
+      newDataAverage,
+      newDataPerformance
 
-    // To Mock Use: uncomment code line 1-4 & 43-46; and comment line 36-39
-    /*
-    setUsers(mockUser);
-    setActivities(mockActivities);
-    setAvererage(mockAverage);
-    setPerformances(mockPerformances);*/
+      // To Mock Use: uncomment code line 1-4 & 44-48; and comment line 38-42
+      /* mockUser,
+      mockActivities,
+      mockAverage,
+      mockPerformances*/
+    );
+    setUsers(user);
   };
 
   fetchData();

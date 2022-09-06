@@ -14,14 +14,15 @@ import PropTypes from "prop-types";
  */
 
 function UserPage() {
-  const [users, setUsers] = useState();
-  const [activities, setActivities] = useState([]);
-  const [average, setAvererage] = useState([]);
-  const [performances, setPerformances] = useState([]);
+  const [userProfile, setUserProfile] = useState([]);
+  const users = userProfile.users;
+  const activities = userProfile.activities;
+  const average = userProfile.average;
+  const performances = userProfile.performances;
   const [errorMsg, setErrorMsg] = useState("Chargement ...");
 
   useEffect(() => {
-    fetchAll(setUsers, setActivities, setAvererage, setPerformances);
+    fetchAll(setUserProfile);
     setTimeout(() => {
       setErrorMsg(
         "  Erreur de chargement de données : Veuillez réessayer plus tard"
