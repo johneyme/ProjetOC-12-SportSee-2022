@@ -1,7 +1,7 @@
 /*import mockUser from "../mock/userData";
 import mockActivities from "../mock/userActivity";
 import mockAverage from "../mock/userAverage";
-import mockPerformance from "../mock/userPerformance";*/
+import mockPerformances from "../mock/userPerformance";*/
 
 /**
  * @async
@@ -38,12 +38,12 @@ function fetchAll(setUsers, setActivities, setAvererage, setPerformances) {
     setAvererage(newDataAverage);
     setPerformances(newDataPerformance);
 
-    // To Mock Use: uncomment code line 1-4 and code line 43-46; and comment line 36-39
+    // To Mock Use: uncomment code line 1-4 & 43-46; and comment line 36-39
     /*
-    setUsers(loadUsersMock);
-    setActivities(loadActivitiesMock);
-    setAvererage(loadAverageMock);
-    setPerformances(loadPerformanceMock);*/
+    setUsers(mockUser);
+    setActivities(mockActivities);
+    setAvererage(mockAverage);
+    setPerformances(mockPerformances);*/
   };
 
   fetchData();

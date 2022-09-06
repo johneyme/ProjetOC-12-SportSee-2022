@@ -18,9 +18,15 @@ function UserPage() {
   const [activities, setActivities] = useState([]);
   const [average, setAvererage] = useState([]);
   const [performances, setPerformances] = useState([]);
+  const [errorMsg, setErrorMsg] = useState("Chargement ...");
 
   useEffect(() => {
     fetchAll(setUsers, setActivities, setAvererage, setPerformances);
+    setTimeout(() => {
+      setErrorMsg(
+        "  Erreur de chargement de données : Veuillez réessayer plus tard"
+      );
+    }, 3000);
   }, []);
 
   if (!users || users.length === 0 || users === undefined) {
@@ -28,9 +34,7 @@ function UserPage() {
       <main className="user-page">
         <Header />
         <AsideOptions />
-        <p className="error-msg">
-          Erreur de chargement de données : Veuillez réessayer plus tard
-        </p>
+        <p className="error-msg">{errorMsg}</p>
       </main>
     );
   } else {
