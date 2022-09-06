@@ -10,7 +10,6 @@ import {
 } from "recharts";
 import PropTypes from "prop-types";
 import "./DailyActivitiesGraph.css";
-//import userActivity from "../mock/userActivity";
 
 /**
  *

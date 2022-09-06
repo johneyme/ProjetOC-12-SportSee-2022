@@ -23,8 +23,16 @@ function UserPage() {
     fetchAll(setUsers, setActivities, setAvererage, setPerformances);
   }, []);
 
-  if (!users || users.length === 0) {
-    return null;
+  if (!users || users.length === 0 || users === undefined) {
+    return (
+      <main className="user-page">
+        <Header />
+        <AsideOptions />
+        <p className="error-msg">
+          Erreur de chargement de données : Veuillez réessayer plus tard
+        </p>
+      </main>
+    );
   } else {
     return (
       <main className="user-page">

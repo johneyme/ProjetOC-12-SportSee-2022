@@ -9,7 +9,6 @@ import {
 import PropTypes from "prop-types";
 import "./AverageLineGraph.css";
 import "../../../style/ResponsiveSquareGraph.css";
-//import userAverage from "../mock/userAverage";
 
 /**
  * @param {object} userAverage

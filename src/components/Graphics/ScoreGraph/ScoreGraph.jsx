@@ -7,7 +7,6 @@ import {
 import "./ScoreGraph.css";
 import "../../../style/ResponsiveSquareGraph.css";
 import PropTypes from "prop-types";
-//import userData from "../mock/userData";
 
 /**
  * @param {object} userData

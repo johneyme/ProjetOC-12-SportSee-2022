@@ -9,7 +9,6 @@ import logoChicken from "../../assets/logo-chicken.svg";
 import logoApple from "../../assets/logo-apple.svg";
 import logoBurger from "../../assets/logo-burger.svg";
 import PropTypes from "prop-types";
-//import user from "../mock/userData";
 
 /**
  * Profile components

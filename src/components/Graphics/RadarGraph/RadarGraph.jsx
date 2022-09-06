@@ -9,7 +9,6 @@ import {
 import PropTypes from "prop-types";
 import "../../../style/ResponsiveSquareGraph.css";
 import "./RadarGraph.css";
-//import userPerformance from "../mock/userPerformance";
 
 /**
  * @param {object} userPerformance
