@@ -9,7 +9,7 @@
 ## Technologies
 
 - [![Made-with-Javascript](https://img.shields.io/badge/Made%20with-Javascript-green)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
-- [![React-v_18.2.0](https://img.shields.io/badge/React-v_17.24.1-blue)](https://fr.reactjs.org/)
+- [![React-v_18.2.0](https://img.shields.io/badge/React-v_18.2.0-blue)](https://fr.reactjs.org/)
 - [![Recharts-v_2.1.13](https://img.shields.io/badge/Recharts-v_2.1.9-%2322b5bf)](https://recharts.org/)
 
 ## Environments
