@@ -3,11 +3,6 @@ import mockActivities from "../mock/userActivity";
 import mockAverage from "../mock/userAverage";
 import mockPerformances from "../mock/userPerformance";*/
 
-import UserModel from "../utils/userModel";
-import ActivitiesModel from "../utils/activitiesModel";
-import AverageModel from "../utils/averageModel";
-import PerformancesModel from "../utils/performancesModel";
-
 /**
  * @async
  * @function fetchAll
@@ -38,23 +33,18 @@ function fetchAll(setUser, setActivities, setAvererage, setPerformances) {
     const newDataAverage = await responseAverage.json();
     const newDataPerformance = await responsePerformance.json();
 
-    let user = new UserModel(newDataUser);
-    let activities = new ActivitiesModel(newDataActivities);
-    let average = new AverageModel(newDataAverage);
-    let performances = new PerformancesModel(newDataPerformance);
-
-    // To Mock Use: uncomment code line 1-4 & 47-52; and comment line 40-45
-    /* 
-     let user = new UserModel(mockUser);
-    let activities = new ActivitiesModel(mockActivities);
-    let average = new AverageModel(mockAverage);
-    let performances = new PerformancesModel(mockPerformances);
+    // To Mock Use: uncomment code line 1-4 & 37-42; and comment line 43-47
+    /*
+    setUser(mockUser);
+    setActivities(mockActivities);
+    setAvererage(mockAverage);
+    setPerformances(mockPerformances);
     */
 
-    setUser(user);
-    setActivities(activities);
-    setAvererage(average);
-    setPerformances(performances);
+    setUser(newDataUser);
+    setActivities(newDataActivities);
+    setAvererage(newDataAverage);
+    setPerformances(newDataPerformance);
   };
 
   fetchData();

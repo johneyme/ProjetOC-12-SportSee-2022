@@ -22,11 +22,10 @@ function Profile(userProfile) {
    */
   const messageToUser =
     "Félicitation ! Vous avez explosé vos objectifs hier 👏";
-
-  const users = userProfile.users;
-  const activities = userProfile.activities;
-  const average = userProfile.average;
-  const performances = userProfile.performances;
+  const users = userProfile.users.data;
+  const activities = userProfile.activities.data;
+  const average = userProfile.average.data;
+  const performances = userProfile.performances.data;
 
   const userInfos = users.userInfos;
   const keyData = users.keyData;
