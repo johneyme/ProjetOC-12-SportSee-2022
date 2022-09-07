@@ -1,16 +1,20 @@
 /**
- * @param  {Array} users
- * @param  {Array} activities
- * @param  {Array} average
- * @param  {Array} performances
+ * @param  {Number} id
+ * @param  {Object} keyData
+ * @param  {Number} score
+ * @param  {Object} userInfos
  * @
  */ // Class UserModel to order data user, receive in fetchData
 class UserModel {
-  constructor(users, activities, average, performances) {
-    this.users = users.data;
-    this.activities = activities.data;
-    this.average = average.data;
-    this.performances = performances.data;
+  constructor(data) {
+    this.id = data.data.id;
+    this.keyData = data.data.keyData;
+    if (data.data.score) {
+      this.score = data.data.score;
+    } else {
+      this.score = data.data.todayScore;
+    }
+    this.userInfos = data.data.userInfos;
   }
 }
 

@@ -14,23 +14,21 @@ import PropTypes from "prop-types";
  */
 
 function UserPage() {
-  const [userProfile, setUserProfile] = useState([]);
-  const users = userProfile.users;
-  const activities = userProfile.activities;
-  const average = userProfile.average;
-  const performances = userProfile.performances;
+  const [user, setUser] = useState([]);
+  const [activities, setActivities] = useState([]);
+  const [average, setAverage] = useState([]);
+  const [performances, setPerformances] = useState([]);
   const [errorMsg, setErrorMsg] = useState("Chargement ...");
 
   useEffect(() => {
-    fetchAll(setUserProfile);
+    fetchAll(setUser, setActivities, setAverage, setPerformances);
     setTimeout(() => {
       setErrorMsg(
         "  Erreur de chargement de données : Veuillez réessayer plus tard"
       );
     }, 3000);
   }, []);
-
-  if (!users || users.length === 0 || users === undefined) {
+  if (!user || user.length === 0 || user === undefined) {
     return (
       <main className="user-page">
         <Header />
@@ -44,7 +42,7 @@ function UserPage() {
         <Header />
         <AsideOptions />
         <Profile
-          users={users}
+          users={user}
           activities={activities}
           average={average}
           performances={performances}
