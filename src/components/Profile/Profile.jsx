@@ -71,7 +71,7 @@ function Profile(userProfile) {
             img={logoBurger}
             count={keyData.lipidCount}
             type="g"
-            category="Calories"
+            category="Lipides"
             color="#FD518110"
           />
         </div>
