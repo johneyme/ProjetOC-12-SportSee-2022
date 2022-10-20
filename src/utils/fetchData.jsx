@@ -1,7 +1,8 @@
-/*import mockUser from "../mock/userData";
+import mockUser from "../mock/userData";
 import mockActivities from "../mock/userActivity";
 import mockAverage from "../mock/userAverage";
-import mockPerformances from "../mock/userPerformance";*/
+import mockPerformances from "../mock/userPerformance";
+console.log(mockUser)
 
 /**
  * @async
@@ -13,7 +14,7 @@ import mockPerformances from "../mock/userPerformance";*/
 
 function fetchAll(setUser, setActivities, setAvererage, setPerformances) {
   // UserId search in Url bar
-  const queryString = window.location.search;
+  /*const queryString = window.location.search;
   const userId = new URLSearchParams(queryString).get("id");
 
   // Fetch use to load data user
@@ -32,14 +33,7 @@ function fetchAll(setUser, setActivities, setAvererage, setPerformances) {
     const newDataActivities = await responseActivities.json();
     const newDataAverage = await responseAverage.json();
     const newDataPerformance = await responsePerformance.json();
-
-    // To Mock Use: uncomment code line 1-4 & 37-42; and comment line 43-47
-    /*
-    setUser(mockUser);
-    setActivities(mockActivities);
-    setAvererage(mockAverage);
-    setPerformances(mockPerformances);
-    */
+    
 
     setUser(newDataUser);
     setActivities(newDataActivities);
@@ -47,7 +41,16 @@ function fetchAll(setUser, setActivities, setAvererage, setPerformances) {
     setPerformances(newDataPerformance);
   };
 
-  fetchData();
+  fetchData();*/
+
+  // To Mock Use: uncomment code line 1-4 & 47-52; and comment line 17-41
+  
+  setUser(mockUser);
+  setActivities(mockActivities);
+  setAvererage(mockAverage);
+  setPerformances(mockPerformances);
+
+  
 }
 
 export default fetchAll;
